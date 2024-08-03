@@ -1,14 +1,26 @@
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
-  let a = 2; //it is like JS but we can not able to show it on web page directly. wee need to use '{coponent to show}'
+const App = () => {
+  const [count, setCount] = useState(0);
+  //usestate is a hook.
+  //in usestate retues array which has 2 elemensts in there.
+  //one is current state value and other is function
+  console.log(count);
+  console.log(setCount);
+
+  const hanldeClickInc = () =>{
+    setCount(count+1);
+  }
+  const hanldeClickDec = () =>{
+    setCount(count-1);
+  }
   return (
-    {/* <div>{a+2} , 
-        {a}+2, 
-       a
-      <h1 className='main'>Hello I am component</h1>
-      <p style={{backgroundColor:"yellow",color:"black"}}>Practice the code</p>
-    </div>//if using multipe tag need to wrap them in the one tag here it is div. Because in React we use jsx files which include javascript and html format in one so we have to do this things.*/
-  });
-}
+    <div>
+      <h1>{count}</h1>
+      <button onClick={hanldeClickInc}>+</button>
+      <button onClick={hanldeClickDec}>-</button>
+    </div>
+  );
+};
+
 export default App;
