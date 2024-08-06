@@ -9,6 +9,16 @@ const Data = () => {
    const handleRemove=(itemID)=>{
     setnData(nData.filter(items=>items.id!==itemID))
    }
+   const handleUpdate=(itemID)=>{
+    setnData(nData.map(items  =>{
+        if(items.id === itemID){
+            return{name:"newName"}
+        }
+        else{
+            return items;
+        }
+    }))
+   }
   return (
     <div>
       <ul>
@@ -17,6 +27,7 @@ const Data = () => {
                 <li key={items.id}>
                     {items.name} <br/>
                     <button onClick={() => handleRemove(items.id)}>Remove</button>
+                    <button onClick={() => handleUpdate(items.id)}>Update</button>
                 </li>
             )
         }
