@@ -1,45 +1,57 @@
 import React, { useState } from "react";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
 
-  const handleName = (e) => {
-    console.log(e.target.value);
-    setName(e.target.value);
-  };
-  const handleEmail = (e) => {
-    console.log(e.target.value);
-    setEmail(e.target.value);
-  };
+const[formData,setFornmData] = useState({
+    name:'',
+    email:'',
+    password:''
+})
 
-  const handlePassword = (e) => {
-    console.log(e.target.value);
-    setPassword(e.target.value);
-  };
+const handleInput = (e)=>{
+    const {name,value}=e.target;
+    setFornmData({...formData,[name]:value
+    })
+}
+
+//   const handleName = (e) => {
+//     console.log(e.target.value);
+//     setName(e.target.value);
+//   };
+//   const handleEmail = (e) => {
+//     console.log(e.target.value);
+//     setEmail(e.target.value);
+//   };
+
+//   const handlePassword = (e) => {
+//     console.log(e.target.value);
+//     setPassword(e.target.value);
+//   };
 
   const handleSubmit=(e)=>{
     e.preventDefault();
   }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>
         Name:
-        <input type="text" value={name} onChange={handleName} />
+        <input type="text" name="name" value={formData.name} onChange={handleInput} />
       </label>
 
       <label>
         Email:
-        <input type="email" value={email} onChange={handleEmail} />
+        <input type="email" name="email" value={formData.email} onChange={handleInput} />
       </label>
 
       <label>
         Password:
-        <input type="password" value={password} onChange={handlePassword} />
+        <input type="password" name="password" value={formData.password} onChange={handleInput} />
       </label>
 
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
