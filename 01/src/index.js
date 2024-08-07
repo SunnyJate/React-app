@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 // import Mobile from './Mobile';
 // import App from './App';
 // import Data from './Data';
-import Form from './Form';
-
+// import Form from './Form';
+import UseEffect from './UseEffect'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +12,8 @@ root.render(
     {/* <Mobile/> */}
     {/* <App/> */}
     {/* <Data/> */}
-    <Form/>
+    {/* <Form/> */}
+    <UseEffect/>
   </React.StrictMode>
 );
 
