@@ -6,7 +6,10 @@ import ReactDOM from 'react-dom/client';
 // import Form from './Form';
 // import UseEffect from './UseEffect'
 // import Fetch from './Fetch';
-import MultipleRetrun from './MultipleRetrun';
+// import MultipleRetrun from './MultipleRetrun';
+import A from './A';
+import B from './B';
+import C from './C';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +20,10 @@ root.render(
     {/* <Form/> */}
     {/* <UseEffect/> */}
     {/* <Fetch/> */}
-    <MultipleRetrun/>
+    {/* <MultipleRetrun/> */}
+    <A/>
+    <B/>
+    <C/>
 
   </React.StrictMode>
 );
