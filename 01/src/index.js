@@ -7,10 +7,9 @@ import ReactDOM from 'react-dom/client';
 // import UseEffect from './UseEffect'
 // import Fetch from './Fetch';
 // import MultipleRetrun from './MultipleRetrun';
-import A from './A';
-import B from './B';
-import C from './C';
-
+// import A from './A';
+// import B from './B';
+// import C from './C';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -21,9 +20,10 @@ root.render(
     {/* <UseEffect/> */}
     {/* <Fetch/> */}
     {/* <MultipleRetrun/> */}
-    <A/>
+   {/*  <A/>
     <B/>
-    <C/>
+    <C/> */}
+    <UseReducer/>
 
   </React.StrictMode>
 );
